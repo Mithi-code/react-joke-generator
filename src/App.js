@@ -17,6 +17,10 @@ function App() {
     setLastName(lastNameRef.current.value);
   }
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <div className='App'>
       <h1>The joke generators</h1>
@@ -28,7 +32,9 @@ function App() {
         <input placeholder='first name' ref={firstNameRef}/>
         <input placeholder='last name' ref={lastNameRef}/>
         <button onClick={generateJoke}>Click to generate</button>
+        
       </form>
+      <button onClick={refreshPage}>Click for new Joke</button>
     
     </div>
   );
